@@ -1,0 +1,10 @@
+<ActionBar title="Landing">
+    <ActionItem text="Add Expense" (tap)="addExpense()" ios.position="right"></ActionItem>
+</ActionBar>
+<GridLayout>
+    <ListView [items]="personData">
+        <template let-item="item">
+            <Label [text]="item.firstname + ' ' + item.lastname"></Label>
+        </template>
+    </ListView>
+</GridLayout>
