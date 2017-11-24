@@ -1,9 +1,19 @@
 import { Component } from "@angular/core";
-import {NS_ROUTER_DIRECTIVE} from "nativescript-angular/router";
+import { Routes, RouterModule } from '@angular/router';  
 
 @Component({
     selector: "ns-app",
-    templateUrl: "app.component.html",
+    template: "<page-router-outlet></page-router-outlet>"
 })
 
-export class AppComponent { }
+export class AppComponent { 
+    userBudget = {
+        "budget": 100,
+        "name": "Patrick",
+        "start": "Thursday",
+        "remaining_budget": 40,
+        "days_remaining": 3,
+        "saved_last_month": 120,
+        "total_saved": 2000
+    };
+}
